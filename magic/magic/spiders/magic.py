@@ -51,9 +51,9 @@ class MagicSpider(scrapy.Spider):
 
         for card in cards:
             card = html.fromstring(card)
-            names.append(card.xpath(NAMES))
-            typess.append(card.xpath(TYPES))
-            stats.append(card.xpath(STATS))
+            names.append(card.xpath(NAMES)) # ? I can try to get the index [0] here and make it unnecessary to select it in the yield later
+            typess.append(card.xpath(TYPES)) # ? *
+            stats.append(card.xpath(STATS)) # ? *
             cards_links.append(card.xpath(CARDS_LINKS))
             descriptions.append(' '.join(card.xpath(DESCRIPTIONS)))
 
