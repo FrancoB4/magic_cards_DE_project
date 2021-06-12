@@ -10,7 +10,7 @@
 
 ### Extra information:
 - The value '-' in any key represents 'not applicable', referring to the cards that do not have that key
-- In the current state, the script can extract all the cards listed in the 'booster pack' entry in the page list (approximately 13000 cards)
+- In the current state, the script can extract ALL CARDS, including reissues and lands listed in the page list (approximately 63000 letters)
 
 ### How does it work?
 #### Coming soon...
