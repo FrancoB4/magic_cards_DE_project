@@ -10,7 +10,7 @@
 
 ### Scraper information:
 - The value '-' in any key represents 'not applicable', referring to the cards that do not have that key
-- In the current state, the script can extract ALL CARDS, including reissues and lands listed in the page list (approximately 63000 letters)
+- In the current state, the script can extract ALL CARDS, including reissues and lands listed in the page list (approximately 63000 cards)
 
 ### How does it work?
 #### Coming soon...
