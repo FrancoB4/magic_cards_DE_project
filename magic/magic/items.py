@@ -6,7 +6,11 @@
 import scrapy
 
 
-class MagicItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Cards(scrapy.Item):
+    card = scrapy.Field()
+    names = scrapy.Field()
+    types = scrapy.Field()
+    stats = scrapy.Field()
+    descriptions = scrapy.Field()
+    collections = scrapy.Field()
+    urls = scrapy.Field()

@@ -51,9 +51,10 @@ class MagicSpider(scrapy.Spider):
 
         for card in cards:
             card = html.fromstring(card)
-            names.append(card.xpath(NAMES)) # ? I can try to get the index [0] here and make it unnecessary to select it in the yield later
-            typess.append(card.xpath(TYPES)) # ? *
-            stats.append(card.xpath(STATS)) # ? *
+            # ? I can try to get the index [0] here and make it unnecessary to select it in the yield later
+            names.append(card.xpath(NAMES))
+            typess.append(card.xpath(TYPES))  # ? *
+            stats.append(card.xpath(STATS))  # ? *
             cards_links.append(card.xpath(CARDS_LINKS))
             descriptions.append(' '.join(card.xpath(DESCRIPTIONS)))
 
@@ -77,8 +78,3 @@ class MagicSpider(scrapy.Spider):
         for collection_url in collections_url:
             collection_url += '?as=text'
             yield response.follow(collection_url, callback=self.parse_cards)
-
-
-# Vamos a intentar aplicar descargar en lugar de cada elemento directamente desde la pagina, vamos a descargar cada objeto carta, y desde dentro de la carta descargaremos
-# Todos los items, asi nos aseguramos que cada carta tenga su propia informacion, ademas esto nos permitiria descargar tambien las descripciones.
-# Es decir descargariamos el texto HTMl de "CARD" y luego en cada uno de esos codigos buscaremos las exprexiones XPATH que necesitemos
