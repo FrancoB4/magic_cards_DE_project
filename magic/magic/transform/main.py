@@ -4,7 +4,7 @@ import hashlib
 
 
 def run():
-    cards_df = pd.read_csv('../../cards.csv')
+    cards_df = pd.read_csv('../../cards.csv') # cambiar esto
     cards_df.drop_duplicates(subset=['name'], keep='first', inplace=True)
 
     cards_df = generate_index(cards_df)
