@@ -1,4 +1,4 @@
-# Magic The Gathering: Data Science Project
+# Magic The Gathering: Data Engineer Project
 #### A simple script that extracts all important data of all Magic cards from the not official Magic site 'Scryfall Magic'
 
 ### Configs:
